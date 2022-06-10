@@ -52,14 +52,16 @@ html {
   display: grid;
 
   /* horizontally make be three columns with these given sizes  */
-  grid-template-columns: 1fr 6fr 3fr;
+  /* grid-template-columns: 1fr 6fr 3fr; */
+  grid-template-columns: 1fr 6fr;
 
   /* n = nav m = main p = prfile i.e right sidebar; since it has no template-row so n m p is enough else
   n m p 
   n n p
   done like that
    */
-  grid-template-areas: "n m p";
+  /* grid-template-areas: "n m p"; */
+  grid-template-areas: "n m";
 
   /* border: var(--test); */
 }
@@ -190,7 +192,7 @@ img[alt~="writing"] {
 }
 
 .top {
-  background: seagreen;
+  /* background: seagreen; */
   margin-top: 10px;
   /* test */
   border: var(--test);
@@ -199,19 +201,42 @@ img[alt~="writing"] {
   grid-template-columns: repeat(3, 1fr);
 
   /* how much gap shoube inbetween the columns  */
-  column-gap: 25px;
+  column-gap: 50px;
   align-content: start;
 }
 
-.top .date-info {
-  background: #ffa500;
+.date-info {
+  background-color: var(--purple);
+  /* border-radius: var(--borderRadius); */
+  /* color: #ffffff; */
+  padding: 20px;
+  /* parent top is grid but that doens; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around;  */
+}
+.date-info > .title::after {
+  content: "\for";
+  white-space: pre;
 }
 
-.top .select-date {
-  background: #5843be;
+.select-date {
+  justify-self: flex-start;
 }
-.top .add-event {
-  background: #fe7066;
+
+.add-event {
+  /* align-self: flex-end; */
+  justify-self: flex-end;
+}
+
+.btn-event {
+  color: white;
+  background-color: #222222;
+  padding: 8px 8px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2),
+    -5px -5px 8px rgba(255, 255, 255, 0.6),
+    inset 3px 3px 4px rgba(255, 255, 255, 0.8),
+    inset -3px -3px 4px rgba(0, 0, 0, 0.2);
 }
 
 .middle {
