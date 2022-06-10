@@ -1,0 +1,50 @@
+// every top-level parent would be wriiten here
+.container {
+  min-height: 100rem;
+  // max-width: 120rem;
+  border: 2px solid black;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark);
+
+  display: grid;
+
+  // horizontal axis
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cell {
+  padding: 2rem;
+  background: #dedede;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  border: 3px solid red;
+  color: #ffffff;
+}
+
+.cell-1 {
+  background: orangered;
+}
+
+.cell-2 {
+  background: #f0a202;
+}
+
+.cell-3 {
+  background: green;
+}
+.cell-4 {
+  background: purple;
+}
+
+.cell-5 {
+  background: brown;
+}
+
+.cell-6 {
+  background: aquamarine;
+}
+.cell-7 {
+  background: #808080;
+}
