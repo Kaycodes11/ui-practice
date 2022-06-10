@@ -59,10 +59,17 @@ body {
           box-shadow: var(--shadow-dark);
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: [start] 100px [col-1-end] 100px [col-2-end] 100px [end]; */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  /* row-gap: 50px; column-gap: 50px; */
+  gap: 10px;
+  /* The area within the cell and this is three grid-template-columns and five grid-template-rows */
 }
 
 .cell {
@@ -77,6 +84,7 @@ body {
 
 .cell-1 {
   background: orangered;
+  /* justify-self: end; align-self: flex-end; */
 }
 
 .cell-2 {
