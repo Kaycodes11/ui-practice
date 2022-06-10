@@ -40,8 +40,10 @@ html {
 } */
 
 .container {
+  /* test */
   /* background: grey; */
-  /* margin: 7rem; */
+  /* margin: 1rem; */
+  /* test */
 
   width: 100vw;
   height: 100%;
@@ -67,16 +69,17 @@ html {
   display: grid;
   /* whic area this cell should occupy based on the grid template */
   grid-area: n;
-  /* make 8 rows within this nav vertically; one after below another */
+  /* so make 8 rows that is basically one below another */
   grid-template-rows: repeat(8, 1fr);
   place-items: center;
 
-  border: var(--test);
+  /* border: var(--test); */
 }
 
 .logo {
   /* sinct its parent .nav using display grid then it can use the grid-row, grid-column, gap etc */
   grid-row: 1/3;
+  /* background: rebeccapurple; */
 }
 
 .logo {
@@ -99,31 +102,49 @@ html {
 .btn {
   width: 45px;
   height: 45px;
-  /* opacity: 0.4; */
+  opacity: 0.4;
   /* space around the element itself */
   padding: 10px;
 }
 
 /* Element then attrible then value */
-img[alt~="filter"] {
-  border: var(--test);
+/* .clock {
+  grid-row: 3 / 4;
+} */
+
+img[alt~="clock"] {
   grid-row: 3 / 4;
 }
 
-img[alt~="dashboard"] {
-  border: 2px solid green;
+/* .calendar {
+  grid-row: 4/ 5;
+} */
+
+img[alt~="calendar"] {
   grid-row: 4/ 5;
 }
 
-img[alt~="profile"] {
-  border: 2px solid blueviolet;
+/* .clipboard {
+  grid-row: 5 / 6;
+} */
+
+img[alt~="clipboard"] {
   grid-row: 5 / 6;
 }
 
-img[alt~="stats"] {
-  border: 2px solid black;
+img[alt~="writing"] {
   grid-row: 6 / 7;
 }
+
+/* .writing {
+  grid-row: 6 / 7;
+} */
+
+.notification {
+  grid-row: 8/9;
+}
+
+/* img[alt~="notification"] {} */
 
 .active {
   width: 60px;
@@ -135,6 +156,20 @@ img[alt~="stats"] {
 
 .main {
   background: magenta;
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+
+  place-items: center;
+}
+
+.cell-1 {
+  background: yellow;
+}
+
+.cell-2 {
+  background: yellow;
+  grid-row: 3 / -1;
 }
 
 .profile {
