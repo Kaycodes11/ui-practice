@@ -1,113 +1,68 @@
-:root {
-  --color-primary: #eb2f64;
-  --color-primary-light: #ff3366;
-  --color-primary-dark: #ba265d;
-  --color-grey-light-1: #faf9f9;
-  --color-grey-light-2: #f4f2f2;
-  --color-grey-light-3: #f0eeee;
-  --color-grey-light-4: #ccc;
-  --color-grey-dark-1: #333;
-  --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999;
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
-  --line: 1px solid var(--color-grey-light-2);
-}
-
 * {
+  /* Universally reset the browser defaults : margin, padding, box-sizing(discard then margin spaces) & font-family  */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-*,
+:root {
+  --orange: #ffa500;
+  --purple: #5843be;
+  --red: #fe7066;
+  --borderRadius: 10px;
+  --border: 0.5px solid lightgrey;
+}
+
+body,
+html {
+  height: 100vh;
+}
+
+/* *,
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 62.5%;
-}
+} */
 
-@media only screen and (max-width: 68.75em) {
+/* @media only screen and (max-width: 68.75em) {
   html {
     font-size: 50%;
   }
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--color-grey-dark-2);
-  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-primary-light)), to(var(--color-primary-dark)));
-  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
+} */
 
 .container {
-  min-height: 100rem;
-  border: 2px solid black;
-  margin: 8rem auto;
-  background-color: var(--color-grey-light-1);
-  -webkit-box-shadow: var(--shadow-dark);
-          box-shadow: var(--shadow-dark);
-  display: -ms-grid;
+  background: grey;
+
+  width: 100vw;
+  height: 100%;
+
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  /* grid-template-columns: [start] 100px [col-1-end] 100px [col-2-end] 100px [end]; */
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
-  /* row-gap: 50px; column-gap: 50px; */
-  gap: 10px;
-  /* The area within the cell and this is three grid-template-columns and five grid-template-rows */
+
+  /* horizontally will be three columns  */
+  grid-template-columns: 1fr 6fr 3fr;
+  /* n = nav m = main p = prfile i.e right sidebar */
+  grid-template-areas: "n m p";
+
+  /* test */
+  /* border: 2px solid red; */
 }
 
-.cell {
-  padding: 2rem;
-  background: #dedede;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
-  border: 3px solid red;
-  color: #ffffff;
-}
-
-.cell-1 {
+.nav {
   background: orangered;
-  /* justify-self: end; align-self: flex-end; */
 }
 
-.cell-2 {
-  background: #f0a202;
+.main {
+  background: magenta;
 }
 
-.cell-3 {
+.profile {
   background: green;
 }
-
-.cell-4 {
-  background: purple;
-}
-
-.cell-5 {
-  background: brown;
-}
-
-.cell-6 {
-  background: aquamarine;
-}
-
-.cell-7 {
-  background: #808080;
-}
-/*# sourceMappingURL=main.css.map */
