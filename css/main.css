@@ -88,17 +88,19 @@ html {
   font-weight: bold;
   width: 70px;
   height: 70px;
-  /* box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2),
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2),
     -5px -5px 8px rgba(255, 255, 255, 0.6),
     inset 3px 3px 4px rgba(255, 255, 255, 0.8),
-    inset -3px -3px 4px rgba(0, 0, 0, 0.2); */
+    inset -3px -3px 4px rgba(0, 0, 0, 0.2);
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  /* test */
+  /* background: #5843be; */
 }
 
-/* NAV IMAGE SIZE AND SETTINGS */
+/* NAV IMAGE'S SIZE AND SETTINGS */
 .btn {
   width: 45px;
   height: 45px;
@@ -140,8 +142,13 @@ img[alt~="writing"] {
   grid-row: 6 / 7;
 } */
 
+/* since the whole i.e a tag and then img tag within need to be moved thus used this class */
 .notification {
   grid-row: 8/9;
+  /* box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2),
+    -5px -5px 8px rgba(255, 255, 255, 0.6),
+    inset 3px 3px 4px rgba(255, 255, 255, 0.8),
+    inset -3px -3px 4px rgba(0, 0, 0, 0.2); */
 }
 
 /* img[alt~="notification"] {} */
